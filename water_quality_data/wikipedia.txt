@@ -1,0 +1,37 @@
+mayfly,https://en.wikipedia.org/wiki/Mayfly
+aquatic sowbug,https://en.wikipedia.org/wiki/Asellus_aquaticus
+water mite,https://en.wikipedia.org/wiki/Hydrachnidia
+air-breathing snail,https://en.wikipedia.org/wiki/Pulmonata
+whirligig beetle,https://en.wikipedia.org/wiki/Whirligig_beetle
+caddisfly,https://en.wikipedia.org/wiki/Trichoptera
+damselfly,https://en.wikipedia.org/wiki/Damselfly
+midge,https://en.wikipedia.org/wiki/Midge
+deer fly,https://en.wikipedia.org/wiki/Chrysops
+water strider,https://en.wikipedia.org/wiki/Gerridae
+stonefly,https://en.wikipedia.org/wiki/Stonefly
+dragonfly,https://en.wikipedia.org/wiki/Dragonfly
+blackfly,https://en.wikipedia.org/wiki/Black_fly
+tubifex,https://en.wikipedia.org/wiki/Tubifex_tubifex
+mosquito,https://en.wikipedia.org/wiki/Mosquito
+dobsonfly,https://en.wikipedia.org/wiki/Dobsonfly
+scud,https://en.wikipedia.org/wiki/Amphipoda
+flatworm,https://en.wikipedia.org/wiki/Flatworm
+blood midge,https://en.wikipedia.org/wiki/Chironomidae
+giant water bug,https://en.wikipedia.org/wiki/Belostomatidae
+gilled snail,https://en.wikipedia.org/wiki/Caenogastropoda
+crane fly,https://en.wikipedia.org/wiki/Crane_fly
+leech,https://en.wikipedia.org/wiki/Leech
+backswimmer,https://en.wikipedia.org/wiki/Notonectidae
+water penny,https://en.wikipedia.org/wiki/Psephenidae
+water boatman,https://en.wikipedia.org/wiki/Corixidae
+riffle beetle,https://en.wikipedia.org/wiki/Elmidae
+predaceous diving beetle,https://en.wikipedia.org/wiki/Dytiscidae
+water scorpion,https://en.wikipedia.org/wiki/Nepidae
+purple loosestrife,https://en.wikipedia.org/wiki/Lythrum_salicaria
+eurasian watermilfoil,https://en.wikipedia.org/wiki/Myriophyllum_spicatum
+water hyacinth,https://en.wikipedia.org/wiki/Pontederia_crassipes
+zebra mussel,https://en.wikipedia.org/wiki/Zebra_mussel
+spiny water flea,https://en.wikipedia.org/wiki/Bythotrephes_longimanus
+asian tiger mosquito,https://en.wikipedia.org/wiki/Aedes_albopictus
+asian carp,https://en.wikipedia.org/wiki/Asian_carp
+crayfish,https://en.wikipedia.org/wiki/Crayfish
