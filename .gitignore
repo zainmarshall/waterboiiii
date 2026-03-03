@@ -13,6 +13,9 @@ dump.rdb
 github_download/
 logs/
 setup.sh
+.env
+oracle.key
+oracle.pub
 redis-stable/
 redis-stable.tar.gz
 redis-*.tar.gz

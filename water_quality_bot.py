@@ -4,29 +4,28 @@ Run:
     source setup.sh
     python water_quality_bot.py
 """
-
 import sciolyid
 
-# ALIASES EDIT
+# ALIASES EDITx 
 COMMAND_STYLE = {
-    "prefixes": ["w.", "w!", "wq!"],
-    "pic_short_alias": "e",
+    "prefixes": ["w.", "w!", "wq!", "W.", "W"],
+    "pic_short_alias": "w",
     "hint_short_alias": "h",
     "check_short_alias": "c",
-    "skip_short_alias": "l"
+    "skip_short_alias": "s"
 }
 
 BOT_CONFIG = {
     "bot_description": "Science Olympiad Water Quality ID practice bot.",
     "bot_signature": "Water Quality ID Bot",
     "prefixes": COMMAND_STYLE["prefixes"],
-    "id_type": "organisms",
+    "id_type": "children",
     "short_id_type": COMMAND_STYLE["pic_short_alias"],
     "support_server": "https://discord.gg/2HbshwGjnm",
-    "source_link": "https://github.com/tctree333/SciOly-ID",
+    "source_link": "https://github.com/zainmarshall/waterboiiii",
     "name": "waterquality",
     "github_image_repo_url": "https://github.com/zainmarshall/waterboiiii-images.git",
-    "invite": "Replace this text with your bot invite URL.",
+    "invite": "https://discord.com/oauth2/authorize?client_id=1478213003886461048&permissions=116736&integration_type=0&scope=bot+applications.commands",
     "category_name": "grouping",
     "category_aliases": {
         "macroinvertebrates": ["macroinvertebrates", "macro", "macroinvert", "mi"],
@@ -35,6 +34,8 @@ BOT_CONFIG = {
     },
     "data_dir": "water_quality_data",
     "default_state_list": "NATS",
+    "local_redis": False,
+    "redis_env": "REDIS_URL",
 }
 
 sciolyid.setup(BOT_CONFIG)
