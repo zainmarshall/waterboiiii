@@ -19,7 +19,7 @@ BOT_CONFIG = {
     "bot_description": "Science Olympiad Water Quality ID practice bot.",
     "bot_signature": "Water Quality ID Bot",
     "prefixes": COMMAND_STYLE["prefixes"],
-    "id_type": "children",
+    "id_type": "macroinvertebrates",
     "short_id_type": COMMAND_STYLE["pic_short_alias"],
     "support_server": "https://discord.gg/2HbshwGjnm",
     "source_link": "https://github.com/zainmarshall/waterboiiii",
