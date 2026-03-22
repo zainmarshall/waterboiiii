@@ -1,14 +1,29 @@
-air-breathing snail
-blackfly
-caddisfly
-crane fly
-damselfly
-dragonfly
-gilled snail
-leech
 mayfly
+aquatic sowbug
+water mite
+air-breathing snail
+whirligig beetle
+caddisfly
+damselfly
 midge
-riffle beetle
-scud
+deer fly
+water strider
 stonefly
+dragonfly
+blackfly
+tubifex
+mosquito
+dobsonfly
+scud
+flatworm
+blood midge
+giant water bug
+gilled snail
+crane fly
+leech
+backswimmer
 water penny
+water boatman
+riffle beetle
+predaceous diving beetle
+water scorpion
