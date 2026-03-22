@@ -1,23 +1,49 @@
 #!/usr/bin/env bash
-# Auto-deploy: pull latest changes, rebuild only if something changed, restart.
-# Add to cron on your Pi:  */30 * * * * /path/to/waterboiiii/deploy.sh >> /var/log/waterboiiii-deploy.log 2>&1
+# Deploy waterboiiii on the Raspberry Pi.
+#
+# Usage:
+#   ./deploy.sh              # pull main repo + restart bot (re-fetches images from waterboiiii-images)
+#   ./deploy.sh watch        # listen for GitHub webhook on port 9000, auto-deploys on push
+#   ./deploy.sh restart      # just restart the bot (forces sciolyid to re-clone images)
 
 set -euo pipefail
 cd "$(dirname "$0")"
 
-# Fetch latest
-git fetch origin master
+deploy() {
+    echo "$(date): Pulling waterboiiii..."
+    git pull origin master
 
-LOCAL=$(git rev-parse HEAD)
-REMOTE=$(git rev-parse origin/master)
+    echo "$(date): Rebuilding & restarting (bot will re-fetch waterboiiii-images on startup)..."
+    docker compose build
+    docker compose up -d --force-recreate
+    echo "$(date): Deploy complete."
+}
 
-if [ "$LOCAL" = "$REMOTE" ]; then
-    echo "$(date): No changes, skipping."
-    exit 0
-fi
+restart_only() {
+    echo "$(date): Restarting bot (will re-fetch latest images)..."
+    docker compose up -d --force-recreate
+    echo "$(date): Restart complete."
+}
 
-echo "$(date): Changes detected, deploying..."
-git pull origin master
-docker compose build --no-cache
-docker compose up -d
-echo "$(date): Deploy complete."
+case "${1:-deploy}" in
+    watch)
+        PORT="${2:-9000}"
+        echo "Listening for GitHub webhooks on port $PORT..."
+        echo "Add this as a webhook in GitHub repo settings:"
+        echo "  URL: http://<your-pi-ip>:$PORT"
+        echo "  Content type: application/json"
+        echo "  Events: Just the push event"
+        echo ""
+        while true; do
+            echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nok" | nc -l "$PORT" > /dev/null 2>&1
+            echo "$(date): Webhook received, deploying..."
+            deploy 2>&1 | tee -a /tmp/waterboiiii-deploy.log
+        done
+        ;;
+    restart)
+        restart_only
+        ;;
+    *)
+        deploy
+        ;;
+esac
