@@ -14,7 +14,7 @@ deploy() {
     git pull origin master
 
     echo "$(date): Rebuilding & restarting (bot will re-fetch waterboiiii-images on startup)..."
-    docker compose build
+    docker compose build --pull
     docker compose up -d --force-recreate
     echo "$(date): Deploy complete."
 }
